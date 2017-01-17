@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+
+public class FindTheDenomination {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int number = sc.nextInt();
+
+		Map<Integer,Integer> map = new HashMap<Integer,Integer>();
+		
+		
+	}
+}

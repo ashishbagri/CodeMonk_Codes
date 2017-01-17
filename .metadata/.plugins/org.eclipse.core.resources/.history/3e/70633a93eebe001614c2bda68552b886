@@ -1,0 +1,26 @@
+import java.util.Scanner;
+
+
+public class FindTheDenomination {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int number = sc.nextInt();
+		int maxDivisible = findMaxDivisible(number);
+		if(maxDivisible==1){
+			System.out.println(number);
+		}
+	}
+
+	private static int findMaxDivisible(int number) {
+		if(number/10!=0){
+			return 10;
+		}
+		if(number/5!=0){
+			return 5;
+		}
+		if(number/2!=0){
+			return 2;
+		}
+		return 1;
+	}
+}

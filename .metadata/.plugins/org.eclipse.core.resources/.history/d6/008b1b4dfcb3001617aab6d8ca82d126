@@ -1,0 +1,14 @@
+import java.util.Scanner;
+
+
+public class LitteJhoolandWorldTour {
+	 public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int tests = sc.nextInt();
+		while(tests-->0){
+			int numberOfCounteries = sc.nextInt();
+			boolean[] visitedCounteries = new boolean[numberOfCounteries];
+			
+		}
+	}
+}
