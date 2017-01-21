@@ -1,0 +1,22 @@
+package core_concepts;
+
+public class QuickUnion extends UnionFind{
+
+	public QuickUnion(int n) {
+		super(n);
+		// TODO Auto-generated constructor stub
+	}
+
+	@Override
+	public void union(int p, int q) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public boolean connected(int p, int q) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

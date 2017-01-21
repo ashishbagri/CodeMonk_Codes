@@ -1,0 +1,30 @@
+package core_concepts;
+
+public class QuickUnion extends UnionFind {
+
+	public QuickUnion(int n) {
+		super(n);
+	}
+
+	/**
+	 * Connects two point p and q depending upon depth of tree
+	 */
+	@Override
+	public void union(int p, int q) {
+		int rootP = root(p);
+		int rootQ = root(q);
+		nodes[rootP] = rootQ;
+	}
+
+	private int root(int p) {
+		while (nodes[p] != p)
+			p = nodes[p];
+		return p;
+	}
+
+	@Override
+	public boolean connected(int p, int q) {
+		return root(p) == root(q);
+	}
+
+}

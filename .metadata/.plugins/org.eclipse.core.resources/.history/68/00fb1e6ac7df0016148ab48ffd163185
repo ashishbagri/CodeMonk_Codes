@@ -1,0 +1,8 @@
+package core_concepts;
+
+public class UnionFind {
+
+	public UnionFind(int n) {
+		// TODO Auto-generated constructor stub
+	}
+}

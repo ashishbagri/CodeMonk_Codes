@@ -1,0 +1,5 @@
+package core_concepts;
+
+public interface DisjointDS {
+
+}

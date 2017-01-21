@@ -1,0 +1,23 @@
+package core_concepts;
+
+public class WeightedQuickUnion extends UnionFind{
+
+	private int[] size;
+	
+	public WeightedQuickUnion(int n) {
+		super(n);
+		size = new int[n];
+	}
+
+	@Override
+	public void union(int p, int q) {
+		
+	}
+
+	@Override
+	public boolean connected(int p, int q) {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+}

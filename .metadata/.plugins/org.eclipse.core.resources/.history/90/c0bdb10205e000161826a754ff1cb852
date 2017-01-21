@@ -1,0 +1,19 @@
+package practice_problems;
+
+import java.util.Scanner;
+
+public class CityandCampers {
+	
+	private int[] nodes;
+	private int[] size;
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		new CityandCampers().start(sc);
+	}
+
+	private void start(Scanner sc) {
+		int n = Integer.parseInt(sc.next());
+		nodes = new int[nodes+1];
+	}
+}

@@ -1,0 +1,17 @@
+package practice_problems;
+
+import java.util.Scanner;
+
+public class CityandCampers {
+	
+	private int[] nodes;
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		new CityandCampers().start(sc);
+	}
+
+	private void start(Scanner sc) {
+		
+	}
+}

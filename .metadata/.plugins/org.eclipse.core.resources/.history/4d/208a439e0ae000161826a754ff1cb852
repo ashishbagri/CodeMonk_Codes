@@ -1,0 +1,7 @@
+package dayZero;
+
+public class GoodString {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in)
+	}
+}

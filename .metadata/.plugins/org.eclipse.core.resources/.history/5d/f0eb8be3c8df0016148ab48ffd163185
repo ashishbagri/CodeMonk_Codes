@@ -1,0 +1,22 @@
+package core_concepts;
+
+public class UnionFind {
+
+	private int[] nodes;
+	
+	public UnionFind(int n) {
+		nodes = new int[n];
+		for(int i=0;i<n;i++){
+			nodes[i]=i;
+		}
+	}
+	
+	public void union(int p,int q){
+		
+	}
+	
+	public boolean connected(int p,int q){
+		return false;
+	}
+	
+}

@@ -1,0 +1,16 @@
+package core_concepts;
+
+public class PathCompression extends WeightedQuickUnion{
+
+	public PathCompression(int n) {
+		super(n);
+		// TODO Auto-generated constructor stub
+	}
+	
+	@Override
+	private int root(int p){
+		return 0;
+		
+	}
+
+}

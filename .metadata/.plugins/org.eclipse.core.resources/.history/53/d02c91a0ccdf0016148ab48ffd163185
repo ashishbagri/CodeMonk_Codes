@@ -1,0 +1,7 @@
+package core_concepts;
+
+public interface DisjointDS {
+
+	public void union(int p, int q);
+	public void connected(int p, int q);
+}
