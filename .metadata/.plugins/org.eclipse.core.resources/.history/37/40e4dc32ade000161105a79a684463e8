@@ -1,0 +1,19 @@
+package practice_problems;
+
+import java.util.Scanner;
+
+public class Sabotage {
+	public static void main(String[] args) {
+		new Sabotage().start(new Scanner(System.in));
+	}
+
+	private int[] nodes;
+	
+	private void start(Scanner sc) {
+		int n = Integer.parseInt(sc.next());
+		nodes = new int[n+1];
+		for(int i=1;i<=n;i++)
+			nodes[i] = i;
+		int q = Integer.parseInt(sc.next())
+	}
+}

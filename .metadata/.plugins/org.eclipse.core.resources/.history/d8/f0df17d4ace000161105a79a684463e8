@@ -1,0 +1,13 @@
+package practice_problems;
+
+import java.util.Scanner;
+
+public class Sabotage {
+	public static void main(String[] args) {
+		new Sabotage().start(new Scanner(System.in));
+	}
+
+	private void start(Scanner scanner) {
+		int n = Integer.parseInt(sc.next());
+	}
+}
