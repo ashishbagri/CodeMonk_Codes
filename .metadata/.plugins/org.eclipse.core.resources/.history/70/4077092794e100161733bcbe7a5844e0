@@ -1,0 +1,13 @@
+import java.util.Scanner;
+
+
+public class ProfessorsIntuition {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int tests = Integer.parseInt(sc.next());
+		while(tests-->0){
+			int a = Integer.parseInt(sc.next());
+			int b = Integer.parseInt(sc.next());
+		}
+	}
+}
