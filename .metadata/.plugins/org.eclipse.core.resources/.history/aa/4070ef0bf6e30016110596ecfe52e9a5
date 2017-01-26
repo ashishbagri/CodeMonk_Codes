@@ -1,0 +1,77 @@
+package codemonk_disjoint_challenge;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class CountFriends {
+
+	private int[] nodes;
+	private int[] size;
+	private int[] friends;
+	
+	private Map<Integer,ArrayList<Integer>> connections = new HashMap<Integer, ArrayList<Integer>>();
+
+	public void union(int p, int q) {
+		int rootP = root(p);
+		int rootQ = root(q);
+		if(rootP==rootQ){
+			return;
+		}
+		
+		if (size[rootP] > size[rootQ]) {
+			nodes[rootQ] = rootP;
+			size[rootP] += size[rootQ];
+			size[rootQ] = 0;
+		} else {
+			nodes[rootP] = rootQ;
+			size[rootQ] += size[rootP];
+			size[rootP] = 0;
+		}
+		
+		
+	}
+
+	protected int root(int p) {
+		while (p != nodes[p]) {
+			nodes[p] = nodes[nodes[p]];
+			p = nodes[p];
+		}
+		return p;
+	}
+
+	/**
+	 * Finds if two points are connected by logN complexity
+	 */
+	public boolean connected(int p, int q) {
+		// TODO Auto-generated method stub
+		return root(p) == root(q);
+	}
+
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		new CountFriends().start(sc);
+		
+	}
+
+	private void start(Scanner sc) {
+		int n = Integer.parseInt(sc.next());
+		int m = Integer.parseInt(sc.next());
+		nodes = new int[n+1];
+		size = new int[n+1];
+		friends = new int[n+1];
+		for(int i=1;i<=n;i++){
+			nodes[i]= i;
+			size[i] = 1;
+		}
+		
+		while(m-->0){
+			union(Integer.parseInt(sc.next()), Integer.parseInt(sc.next()));
+		}
+		
+		for(int i=1;i<=n;i++){
+			System.out.print(size[root(i)]-1+" ");
+		}
+	}
+}

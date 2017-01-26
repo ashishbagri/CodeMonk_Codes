@@ -1,0 +1,44 @@
+package codemonk_disjoint_challenge;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class CountFriends {
+
+	private int[] nodes;
+	private int[] size;
+	private Map<Integer,ArrayList<Integer>> connections = new HashMap<Integer, ArrayList<Integer>>();
+
+	public void union(int p, int q) {
+		int rootP = root(p);
+		int rootQ = root(q);
+		if (size[rootP] > size[rootQ]) {
+			nodes[rootQ] = rootP;
+			if(connections.get(rootP)==null){
+				connections.put(rootP, new ArrayList<Integer>());
+			}
+			size[rootP] += size[rootQ];
+		} else {
+			nodes[rootP] = rootQ;
+			size[rootQ] += size[rootP];
+		}
+	}
+
+	protected int root(int p) {
+		while (p != nodes[p]) {
+			nodes[p] = nodes[nodes[p]];
+			p = nodes[p];
+		}
+		return p;
+	}
+
+	/**
+	 * Finds if two points are connected by logN complexity
+	 */
+	public boolean connected(int p, int q) {
+		// TODO Auto-generated method stub
+		return root(p) == root(q);
+	}
+
+}
