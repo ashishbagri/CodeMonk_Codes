@@ -7,9 +7,13 @@ public class TestLinearPeakFinding {
 
 	@Test
 	public void test() {
-		int[] values = {1,2,3,4,5,6,9,7};
+		int[] values = {4,6,0,4,3,6,1,7};
 		int peakValue = new LinearPeakFinding(values).findPeak();
-		Assert.assertEquals(peakValue, 9);
+		Assert.assertEquals(peakValue, 6);
+		
+		peakValue = new BinaryPeakFinder(values).findPeak();
+		Assert.assertEquals(peakValue, 6);
+		
 	}
 
 }

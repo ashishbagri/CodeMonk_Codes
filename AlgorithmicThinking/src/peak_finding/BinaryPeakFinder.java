@@ -8,11 +8,18 @@ public class BinaryPeakFinder extends LinearPeakFinding{
 	
 	@Override
 	public int findPeak() {
-		int mid = values.length/2;
+		
+		return findPeak(values,0, values.length-1);
+	}
+
+	private int findPeak(int[] values, int i, int j) {
+		int mid = (j+i)/2;
 		if(values[mid]<values[mid-1]){
-			
-		}
-		return super.findPeak();
+			return findPeak(values, i, mid);
+		}else
+			if(values[mid]<values[mid+1])
+				return findPeak(values, mid, j);
+		return values[mid];
 	}
 	
 }
