@@ -1,9 +1,0 @@
-import java.util.Scanner;
-
-public class MonkAndPhilospherStone {
-	private static Scanner sc = null;
-	private static BufferedReader br = null;
-	public static void main(String[] args) {
-		
-	}
-}

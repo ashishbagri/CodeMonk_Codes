@@ -1,5 +1,0 @@
-package core_concepts;
-
-public class QuickUnion extends UnionFind{
-
-}
