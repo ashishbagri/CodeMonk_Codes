@@ -1,5 +1,6 @@
 package heap_and_prioritysort.practice;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MaxInQueue {
@@ -11,8 +12,11 @@ public class MaxInQueue {
 		int n = sc.nextInt();
 		long[] arr = new long[n+1];
 		long[] max_heap = new long[n+1];
+		ArrayList<Long> list = new ArrayList<Long>();
+		index = n;
 		for(int i = 1;i<=n;i++){
 			arr[i] = Long.parseLong(sc.next());
+			list.add(arr[i]);
 		}
 		int q = Integer.parseInt(sc.next());
 		while(q-->0){
@@ -22,7 +26,7 @@ public class MaxInQueue {
 				System.out.println(maximum(max_heap));
 			}else{
 				long second = Long.parseLong(sc.next());
-				add(max_heap,second);
+				add(list,second);
 			}
 		}
 	}
@@ -32,37 +36,42 @@ public class MaxInQueue {
 		return arr[1];
 	}
 
-	private static void add(long[] arr, long second) {
-		arr[index] = second;
+	private static void add(ArrayList<Long> list, long second) {
+		//arr[index] = second;
+		list.add(second);
 		for(int i = index/2;i>=1;i--){
-			max_heap(arr,i,index);
+			max_heap(list,i,index);
 		}
 		index++;
+		
+		//index++;
 	}
 
-	private static void max_heap(long[] arr, int i, int index) {
+	private static void max_heap(ArrayList<Long> list, int i, int index) {
 		
 		int left = i*2;
 		int right = i*2+1;
 		
 		int largest = i;
 		
-		if(left<=index&&arr[left]>arr[largest]){
+		if(left<=index&&list.get(left)>list.get(largest)){
 			largest = left;
 		}
-		if(right<=index&&arr[right]>arr[largest]){
+		if(right<=index&&list.get(right)>list.get(largest)){
 			largest = right;
 		}
 		
 		if(largest!=i){
-			swap(arr,i,largest);
-			max_heap(arr, largest, index);
+			swap(list,i,largest);
+			max_heap(list, largest, index);
 		}
 	}
 
-	private static void swap(long[] arr, int i, int largest) {
-		long temp =arr[i];
-		arr[i] = arr[largest];
-		arr[largest] = temp;
+	private static void swap(ArrayList<Long> list, int i, int largest) {
+		long temp =list.get(i);
+		list.remove(i);
+		list.add(i, list.get(largest));
+		list.remove(largest);
+		list.add(largest, temp);
 	}
 }
