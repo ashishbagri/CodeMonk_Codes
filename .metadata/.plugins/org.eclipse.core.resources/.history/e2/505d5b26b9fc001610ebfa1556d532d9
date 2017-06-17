@@ -1,0 +1,35 @@
+package heaps_and_prioritysort.concepts;
+
+public class BasicMaxPQ<Key extends Comparable<Key>> implements MaxPQ<Key extends Comparable<Key>>{
+
+	@Override
+	public void insert(Comparable<Key> key) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Comparable<Key> delMax() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	@Override
+	public Comparable<Key> max() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+}

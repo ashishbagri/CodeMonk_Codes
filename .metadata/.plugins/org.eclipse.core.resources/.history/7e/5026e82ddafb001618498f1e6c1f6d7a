@@ -1,0 +1,8 @@
+package basics_of_string_manipulation;
+
+public class SortTheSubstring {
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scannner(System.in)
+	}
+}

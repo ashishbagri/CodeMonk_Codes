@@ -14,7 +14,7 @@ public class SortedLinkedListImpl<K,V> implements SymbolTable<K, V>{
 		if(elementryElement.isEmpty())
 			return null;
 		int rank = rank(key);
-		if(rank<elementryElement.size()&&)
+		//if(rank<elementryElement.size()&&)
 		return null;
 	}
 

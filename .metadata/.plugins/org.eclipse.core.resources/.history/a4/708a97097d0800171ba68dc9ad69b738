@@ -1,0 +1,50 @@
+package symbol_tables.elementry_implementation;
+
+public class BinarySearchTree<Key extends Comparable<Key>, Value> {
+
+	private Node root;
+
+	private class Node {
+
+		private Key key;
+		private Value value;
+		private Node left, right;
+
+		public Node(Key key, Value value) {
+			this.key = key;
+			this.value = value;
+		}
+	}
+
+	public void put(Key key, Value value) {
+		root = put(Node root, Key key, Value value);
+	}
+	
+	private Node put(Node root, Key key,Value value){
+		
+		return null;
+	}
+
+	public Value get(Key key) {
+		Node x = root;
+
+		while (x != null) {
+			int compare = key.compareTo(root.key);
+			if (compare < 0)
+				x = x.left;
+			if (compare > 0)
+				x = x.right;
+			if (compare == 0)
+				return x.value;
+		}
+		return null;
+	}
+
+	public void delete(Key key) {
+
+	}
+
+	public Iterable<Key> iterator() {
+		return null;
+	}
+}

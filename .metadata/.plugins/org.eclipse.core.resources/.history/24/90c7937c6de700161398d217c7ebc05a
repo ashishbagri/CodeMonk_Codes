@@ -1,0 +1,14 @@
+package peak_finding;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class LinearPeakFinding {
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,5 +1,7 @@
 package BasicsOfInputPutput;
 
+import java.util.Scanner;
+
 /**
  * Dhananjay has recently learned about ASCII values.He is very fond of
  * experimenting. With his knowledge of ASCII values and character he has
@@ -51,9 +53,41 @@ package BasicsOfInputPutput;
  *
  */
 public class MagicalWord {
+
+	private static int primes[] = {67,71,73,79,83,89,97,101,103,107,109,113};
 	
 	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int tests = sc.nextInt();
+		while(tests-->0){
+			int n = Integer.parseInt(sc.next());
+			String input = sc.next();
+			char[] c = input.toCharArray();
+			for(int i =0;i<c.length;i++){
+				c[i] = findNearestPrimeChar(c[i]);
+			}
+			System.out.println(c);
+		}
 		
+	}
+
+	private static char findNearestPrimeChar(char c) {
+		if(c<=67)
+			return 67;
+		if(c>=113)
+			return 113;
+		
+		for(int j =0 ;j<primes.length;j++){
+			
+			if(primes[j]>c){
+				int forward = primes[j]-c;
+				int backward = c-primes[j-1];
+				if(forward<backward)
+					return (char) primes[j];
+				return (char) primes[j-1];
+			}
+		}
+		return 0;
 	}
 
 }

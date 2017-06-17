@@ -1,0 +1,53 @@
+package heaps_and_prioritysort.concepts;
+
+public class BasicMaxPQ<Key extends Comparable<Key>> implements MaxPQ<Key> {
+
+	private Key[] pq;
+	private int n;
+	private final static int defaultCapacity = 0xf;
+
+	public BasicMaxPQ() {
+		this(defaultCapacity);
+	}
+
+	public BasicMaxPQ(int capacity) {
+		pq = (Key[]) new Comparable[capacity];
+	}
+
+	@Override
+	public void insert(Key key) {
+		pq[n++] = key;
+	}
+
+	@Override
+	public Key delMax() {
+		int max = 0;
+		for(int i = 1;i<n;i++){
+			if(less(max,i))
+				max = i;	
+		}
+		exchange(max,n-1);
+		
+		return pq[--n];
+	}
+
+	private boolean less(int max, int i) {
+		return pq[max].compareTo(pq[i])>1?false:true;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		return n==0;
+	}
+
+	@Override
+	public Key max() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public int size() {
+		return n;
+	}
+}

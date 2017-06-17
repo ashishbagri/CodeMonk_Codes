@@ -1,0 +1,23 @@
+package growth_of_function;
+
+public class InsertionSort {
+
+	public static void main(String[] args) {
+		
+	}
+	
+	public void insertionSort(int[] nums){
+		for(int i =1;i<nums.length;i++){
+			for(int j =i-1;j>=0;j--){
+				if(nums[j]<nums[i])
+					swap(i,j,nums);
+			}
+		}
+	}
+
+	private void swap(int i, int j, int[] nums) {
+		int a = nums[i];
+		nums[i] = nums[j];
+		nums[j] = a;
+	}
+}

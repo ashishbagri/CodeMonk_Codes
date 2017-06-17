@@ -1,0 +1,24 @@
+package set4;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+public class SpaceEscape {
+
+	private Map<Integer,Integer> leftOver;
+	private Map<Integer,ArrayList<Integer>> connections;
+	private int[][] cost;
+	private int[][] carry;
+	
+	public SpaceEscape(int n) {
+		leftOver = new HashMap<Integer, Integer>();
+		connections = new HashMap<Integer, ArrayList<Integer>>();
+		cost = new int[n+1][n+1];
+		carry = new int[n+1][n+1];
+	}
+	
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in)
+	}
+}

@@ -1,0 +1,22 @@
+package basics_of_string_manipulation;
+
+import java.util.HashMap;
+import java.util.Map;
+import java.util.Scanner;
+
+public class FavoriteSubsequence {
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		
+		String input = sc.next();
+		Map<Character,Integer> countMap = new HashMap<Character, Integer>();
+		countMap.put('a', 0);
+		countMap.put('b', 0);
+		countMap.put('c', 0);
+		
+		for(int i =0;i<input.length();i++){
+			countMap.get(input.charAt(i))++;
+			
+		}
+	}
+}

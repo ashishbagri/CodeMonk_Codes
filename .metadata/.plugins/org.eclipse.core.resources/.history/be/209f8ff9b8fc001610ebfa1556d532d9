@@ -1,0 +1,5 @@
+package heaps_and_prioritysort.concepts;
+
+public class BasicMaxPQ {
+
+}

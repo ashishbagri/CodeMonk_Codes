@@ -1,0 +1,15 @@
+package peak_finding;
+
+public class BinaryPeakFinder extends LinearPeakFinding{
+
+	public BinaryPeakFinder(int[] values) {
+		super(values);
+	}
+	
+	@Override
+	public int findPeak() {
+		
+		return findPeak(values,start, end);
+	}
+	
+}

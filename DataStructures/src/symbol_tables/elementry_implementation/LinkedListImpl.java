@@ -40,8 +40,15 @@ public class LinkedListImpl<K, V> implements SymbolTable<K, V> {
 
 	@Override
 	public void delete(K key) {
-		// TODO Auto-generated method stub
-
+		Pair pair = null;
+		for(Pair p : elementryList){
+			K k = (K)p.getKey();
+			
+			if(key.equals(k)){
+				pair = p;
+			}
+		}
+		elementryList.remove(pair);
 	}
 
 	@Override
@@ -68,7 +75,7 @@ public class LinkedListImpl<K, V> implements SymbolTable<K, V> {
 		return null;
 	}
 
-	class Pair<K, V> {
+	private class Pair<K, V> {
 		private final K key;
 		private V value;
 

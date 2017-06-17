@@ -1,0 +1,21 @@
+package peak_finding;
+
+public class LinearPeakFinding {
+	
+	private int[] values;
+	
+	public LinearPeakFinding(int[] values) {
+		this.values = values;
+	}
+	
+	public int findPeak(){
+		int peakValue = 0;
+		for(int i =1;i<values.length-1;i++){
+			if(values[i]>=values[i-1] && values[i]>=values[i+1]){
+				peakValue = values[i];
+				break;
+			}
+		}
+		return peakValue;
+	}
+}

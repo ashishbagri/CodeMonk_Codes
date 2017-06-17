@@ -1,0 +1,7 @@
+package symbol_tables.elementry_implementation;
+
+public class BSTMainClient {
+	public static void main(String[] args) {
+		
+	}
+}

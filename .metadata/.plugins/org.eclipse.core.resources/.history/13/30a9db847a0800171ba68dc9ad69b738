@@ -1,0 +1,5 @@
+package symbol_tables.elementry_implementation;
+
+public class BinarySearchTree {
+
+}
