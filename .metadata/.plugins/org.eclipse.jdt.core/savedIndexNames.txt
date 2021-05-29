@@ -1,5 +1,0 @@
-INDEX VERSION 1.127+E:\workspaces\codemonk\.metadata\.plugins\org.eclipse.jdt.core
-3751944716.index
-1942895373.index
-1070395053.index
-2055439240.index

@@ -1,5 +1,0 @@
-package peak_finding;
-
-public class BinaryPeakFinder extends LinearPeakFinding{
-	
-}

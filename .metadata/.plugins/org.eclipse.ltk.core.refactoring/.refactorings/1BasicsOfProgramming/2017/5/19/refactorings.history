@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;Klass.java&apos; to &apos;BasicsOFBitManipulations.Klass.java&apos;&#x0D;&#x0A;- Original project: &apos;1BasicsOfProgramming&apos;&#x0D;&#x0A;- Destination element: &apos;BasicsOFBitManipulations.Klass.java&apos;&#x0D;&#x0A;- Original element: &apos;BasicsOFBitManipulations.Klass.java&apos;" description="Copy compilation unit" destination="/src&lt;BasicsOFBitManipulations{Klass.java" element1="/src&lt;BasicsOFBitManipulations{Klass.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1494303866217" units="1" version="1.0"/>
-</session>

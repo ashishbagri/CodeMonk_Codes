@@ -1,4 +1,0 @@
-package heaps_and_prioritysort.concepts;
-
-public class BasicMaxPQ<Key extends Comparable<Key>> implements MaxPQ<Key>{
-}

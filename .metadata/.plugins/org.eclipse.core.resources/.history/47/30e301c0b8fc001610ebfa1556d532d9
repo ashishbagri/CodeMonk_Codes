@@ -1,5 +1,0 @@
-package heaps_and_prioritysort.concepts;
-
-public interface MaxPQ<Key extends Comparable<Key>> {
-
-}
