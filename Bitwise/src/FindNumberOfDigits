@@ -1,0 +1,45 @@
+/**
+ Find the number of digits in a number.
+ */
+
+class FundNumberOfDigits {
+
+    /**
+     * get the number of digits in the given  num
+     * The idea is to use Math.log to get the answer in constant time.
+     * @param num
+     * @return
+     */
+    public int numberOfDigits(int num){
+        return (int)Math.floor(Math.log(num))+1;
+    }
+
+    /**
+     * check if kth bit is set in the given num
+     * The idea is to shift 1 by k-1 bit(to create a number with 1 at kth positon and
+     * rest positions as zero
+     * then just logical  and it
+     * the property of & is that both has to be one only then 1
+     * if the answer is zero that means the bit is not set.
+     * @param num
+     * @param k
+     * @return
+     */
+    public boolean checkIfKthBitIsSet(int num, int k){
+        return (num&(1<<k-1))!=0;
+    }
+
+    /**
+     * check  if given number is powerOfTwo
+     * forex : 4, 8, 16
+     *
+     * the idea is to logical & a number with its preeceding number
+     * it will make all bits zero and you will get ans
+     *
+     * @param num
+     * @return
+     */
+    public boolean isPowerOfTwo(int num){
+        return (num&(num-1))==0;
+    }
+}
