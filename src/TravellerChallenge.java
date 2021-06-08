@@ -6,6 +6,12 @@ import java.util.*;
 public class TravellerChallenge {
     public static void main(String[] args) throws IOException {
         new TravellerChallenge().solve();
+        String a_b;
+        try {
+            a_b = "x";
+        } catch (Exception e) {
+
+        }
     }
 
     private void solve() throws IOException {
@@ -40,4 +46,5 @@ public class TravellerChallenge {
             }
         }
     }
+
 }

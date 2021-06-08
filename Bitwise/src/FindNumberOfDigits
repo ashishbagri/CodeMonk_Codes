@@ -42,4 +42,108 @@ class FundNumberOfDigits {
     public boolean isPowerOfTwo(int num){
         return (num&(num-1))==0;
     }
+
+    /**
+     * how many bts are set
+     * the  ideais to & the number with its preceeding number which just mask
+     * the last digit.
+     *
+     * you then just keep doing this unless the number becomes zero;
+     * @param n
+     * @return
+     */
+    public int howManySetBits(int n){
+        int result = 0;
+        while(n>0){
+            n&=(n-1);
+            result++;
+        }
+        return result;
+    }
+
+    /***
+     * Just xor all numbers , below properties o xor will help
+     * x xor 0 = x
+     * x xor x = 0
+     * x xor y = y xor x
+     * @param nums
+     * @return
+     */
+    public int findOddElement(int[] nums){
+        int ans = 0;
+        for(int n : nums){
+            ans^=n;
+        }
+        return ans;
+    }
+
+    /**
+     * Firswt get xor of all nums
+     * after the right most set bit
+     * check if the which numbers has the bit set and which doesnot
+     * @param num
+     * @return
+     */
+    public int[] findTwoOddElemts(int[] num){
+        int xor = findOddElement(num);
+        int set_bit = findRightMostsetBit(xor);
+
+        int x=0;int y=0;
+        for(int n : num){
+            if((n&set_bit)!=0)
+                x^=n;
+            else
+                y^=n;
+        }
+        return new int[]{x,y};
+    }
+
+    /**
+     * to find the rightmost setbit
+     * just logical & a number with its preceeding negative num
+     * @param xor
+     * @return
+     */
+    private int findRightMostsetBit(int xor) {
+        return xor & (~(xor-1));
+    }
+
+    public boolean checkIfAnumberIsOdd(int n){
+        return x&1 !=0;
+    }
+
+    /**
+     * total number of sets
+     * 2^n
+     * for ex : abc - 2^3 = 8
+     * @param s
+     */
+    private void generatePowerSet(String s){
+
+
+        int n = s.length();
+        int powerSetCount = 1<<n;
+
+        for(int i =0;i<powerSetCount;i++) {
+            for (int j = 0; j < n; j++)
+                if ((i & (1 << j)) > 0)
+                    System.out.print(s.charAt(j));
+            System.out.println();
+        }
+    }
+
+    /**
+     * The idea is to logical & a number with left shift of the number by 1.
+     * increae the length count by 1 till the number becomes  0
+     * @param s
+     * @return
+     */
+    private int lengthOfMaxConsecutiveOnes(int s){
+        int len = 0;
+        while(s>0){
+            s&=s<<1;
+            len++;
+        }
+        return len;
+    }
 }

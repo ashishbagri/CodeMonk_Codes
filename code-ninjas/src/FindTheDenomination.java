@@ -28,6 +28,5 @@ public class FindTheDenomination {
 				System.out.print(key+" ");
 			}
 		}
-		
 	}
 }
